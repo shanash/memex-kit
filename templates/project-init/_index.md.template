@@ -1,0 +1,53 @@
+# Project Memory Index
+
+> **Last Updated**: {{DATE}}
+> **Total Memories**: {{TOTAL_COUNT}}
+
+---
+
+## Quick Navigation
+
+### Design Decisions (decision-) [{{DECISION_COUNT}}]
+| Memory Name | Date | Summary |
+|-------------|------|---------|
+{{DECISION_ROWS}}
+
+### Feature Implementations (feature-) [{{FEATURE_COUNT}}]
+| Memory Name | Date | Summary |
+|-------------|------|---------|
+{{FEATURE_ROWS}}
+
+### Bug Fixes (bugfix-) [{{BUGFIX_COUNT}}]
+| Memory Name | Date | Summary |
+|-------------|------|---------|
+{{BUGFIX_ROWS}}
+
+### Discussions (discussion-) [{{DISCUSSION_COUNT}}]
+| Memory Name | Date | Summary |
+|-------------|------|---------|
+{{DISCUSSION_ROWS}}
+
+### Learnings (learning-) [{{LEARNING_COUNT}}]
+| Memory Name | Date | Summary |
+|-------------|------|---------|
+{{LEARNING_ROWS}}
+
+### Other [{{OTHER_COUNT}}]
+| Memory Name | Date | Summary |
+|-------------|------|---------|
+{{OTHER_ROWS}}
+
+---
+
+## Recently Added (Last 5)
+
+{{RECENT_LIST}}
+
+---
+
+## Usage
+
+```
+Read specific memory: mcp__serena__read_memory("memory-name")
+Update index: /mk:index
+```

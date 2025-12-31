@@ -1,0 +1,105 @@
+# {{PROJECT_NAME}}
+
+> This file is automatically loaded at Claude Code session start.
+
+## TL;DR
+<!-- Key info to understand the project in 30 seconds -->
+- **Goal**: {{PROJECT_GOAL}}
+- **Tech Stack**: {{TECH_STACK}}
+- **Current Status**: {{CURRENT_STATUS}}
+
+## Serena MCP Integration
+
+This project maintains context across sessions via Serena MCP.
+
+### On Session Start
+```
+1. mcp__serena__activate_project("{{PROJECT_NAME}}")
+2. mcp__serena__check_onboarding_performed()
+3. If needed, mcp__serena__list_memories() to check existing memories
+```
+
+### Memory Naming Convention
+| Prefix | Purpose | Example |
+|--------|---------|---------|
+| `decision-` | Design/architecture decisions | `decision-auth-jwt` |
+| `feature-` | Implemented features | `feature-login-system` |
+| `bugfix-` | Bug fix history | `bugfix-2025-01-01-null-check` |
+| `discussion-` | Key discussions | `discussion-api-structure` |
+| `learning-` | Discoveries/learnings | `learning-react-hydration` |
+
+---
+
+## Memory Save Triggers
+
+### For Claude: Suggest saving in these situations
+
+1. **Design decision completed**
+   > "Should I save this decision to memory? (`decision-{{topic}}`)"
+
+2. **Feature implementation completed**
+   > "Should I record this implementation? (`feature-{{name}}`)"
+
+3. **Bug fix completed**
+   > "Should I record this fix? (`bugfix-{{date}}-{{issue}}`)"
+
+4. **After important discussion**
+   > "Should I save this discussion? (`discussion-{{topic}}`)"
+
+5. **New discovery/learning**
+   > "Should I record this? (`learning-{{topic}}`)"
+
+### Save Format (Serena Memory)
+```markdown
+# {{title}}
+
+## Date
+{{YYYY-MM-DD}}
+
+## Context
+{{why this decision/work was done}}
+
+## Content
+{{specific details}}
+
+## Impact
+{{impact of this decision/work}}
+
+## Related Files
+- {{file path}}
+```
+
+---
+
+## Project Structure
+
+```
+{{PROJECT_NAME}}/
+├── CLAUDE.md          # This file
+├── src/               # Source code
+├── tests/             # Tests
+└── docs/              # Documentation (optional)
+```
+
+---
+
+## Key Rules
+
+1. **Code Style**: {{CODE_STYLE}}
+2. **Testing**: {{TEST_POLICY}}
+3. **Commits**: {{COMMIT_CONVENTION}}
+
+---
+
+## Current Progress
+
+<!-- Brief recent work notes -->
+- [ ] {{CURRENT_TASK}}
+
+---
+
+## Reference
+
+- List memories: `mcp__serena__list_memories()`
+- Read specific memory: `mcp__serena__read_memory("memory-name")`
+- Save memory: `mcp__serena__write_memory("memory-name", "content")`
